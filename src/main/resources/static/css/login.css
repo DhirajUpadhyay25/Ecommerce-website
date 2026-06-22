@@ -1,0 +1,85 @@
+@charset "UTF-8";
+body {
+  background: #f5f7fa;
+}
+
+/* Container */
+.login-container {
+  height: 100vh;
+}
+
+/* Card */
+.login-card {
+  background: #fff;
+  padding: 50px;
+  border-radius: 12px;
+  width: 500px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Inputs */
+.custom-input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* Focus glow */
+.custom-input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+}
+
+/* Floating label fix */
+.form-floating label {
+  color: #888;
+}
+
+/* Button */
+.login-btn {
+  
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+/* Button hover */
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 77, 0.4);
+}
+
+/* Links */
+.forgot-link,
+.signup-link {
+  text-decoration: none;
+  color: #ff4d4d;
+  transition: 0.3s;
+}
+
+.forgot-link:hover,
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Password toggle */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-password:hover {
+  color: #ff4d4d;
+}

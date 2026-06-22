@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/producc.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="/css/footer.css">
+
+</head>
+<body>
+<div th:replace="~{nav::layout(~{::section})}"></div>
+<section>
+    <div class="bg-primary p-3 mt-3">
+    <div class="row">
+    <div class="col-md-10 offset--md-2">
+    <form action="/search" method="post">
+    
+    <div class="input-group">
+    
+    <input type="search" class="form-control" name="search" placeholder="search product">
+    <button type="submit" class="btn btn-success text-white" >Search</button>
+    
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    
+    <!-- Categories List -->
+    
+    <div class="container-fluid mt-2">
+    <div class="row">
+    <div class="col-md-2">
+    <div class="card shadow p-3 mb-5 bg-body rounded">
+    <div class="card-body">
+    <p class="text-center fs-4">Categories</p>
+      <ul class="list-group">
+  <li class="list-group-item ">All</li>
+  <li class="list-group-item">Mobile Phone</li>
+  <li class="list-group-item">Laptop</li>
+  <li class="list-group-item">T-Shirt</li>
+  <li class="list-group-item">Jeans</li>
+</ul>
+    </div>
+    </div>
+    </div>
+    
+     <div class="col-md-10">
+      <div class="card">
+    <div class="card-body">
+    <p class="text-center fs-3"> Products</p>
+    
+    
+    
+   <!-- cards -->
+     <!-- 1   -->
+
+<div class="row">
+    <div class="col-md-3" th:each=" p:${product}" >
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image  class="card-img-top product-img"  -->
+        <img  th:src="@{'/product_img/' + ${p.image}}" width="100%" height="120px" alt="product-Image ">
+
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title" th:text="${p.name}"></h5>
+          <!-- Price -->
+          <p class="price" th:text="${p.price}"><span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+    <!-- 2   -->
+    
+  <div class="col-md-3">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  <!--3   -->
+  
+  <div class="col-md-3">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+    <!--  4 -->
+  <div class="col-md-3">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+  
+    <!--5   -->
+    
+  <div class="col-md-3 mt-4">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  
+    <!-- 6  --> 
+    
+  <div class="col-md-3 mt-4">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  <!--    -->
+     <!-- 6  --> 
+    
+  <div class="col-md-3 mt-4">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+     <!-- 6  --> 
+    
+  <div class="col-md-3 mt-4">
+      <div class="card product-card">
+      <div class="card-body ">
+
+        <!-- Product Image -->
+        <img src="images/laptop.jpg" 
+             class="card-img-top product-img" 
+             alt="Laptop">
+        <!-- Product Details -->
+         <div class="card-body">
+          <h5 class="card-title">Dell Inspiration 16 Plus</h5>
+          <!-- Price -->
+          <p class="price">₹ 45000.0<span class="rating-inline">
+           <i class="fa-solid fa-star"></i> 4.8</span></p>
+          <!-- Old Price + Discount -->
+          <p class="old-price">
+            <span class="text-decoration-line-through">₹ 50000.0</span>
+            <span class="discount">10% off</span>
+          </p>
+
+          <!-- Button -->
+          <a href="/view_product" class="btn view-btn w-100">View Details</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+</div>
+     
+     </div>
+    </div>
+    
+    </div>
+     </div>
+    
+    <!--  Footer  -->
+<footer class="footer-section mt-5">
+  <div class="container">
+    <div class="row text-start">
+
+      <!-- Products -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Products</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">T-Shirts</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Phones</a></li>
+        </ul>
+      </div>
+
+      <!-- Network -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Network</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Science & Technology</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Company</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="footer-bottom text-center ">
+     ©2026 DressUp. All Rights Reserved.
+</div>
+  </div>
+</footer>
+</section>
+</body>
+</html>

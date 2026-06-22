@@ -1,0 +1,55 @@
+@charset "UTF-8";
+.product-img {
+  max-height: 300px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+/* Price */
+.price {
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+.discount {
+  color: green;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+/* Icons */
+.feature-icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.feature-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Button */
+.add-cart-btn {
+  background: linear-gradient(135deg, #ff2e63, #e60039);
+  color: #fff;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 46, 99, 0.4);
+}

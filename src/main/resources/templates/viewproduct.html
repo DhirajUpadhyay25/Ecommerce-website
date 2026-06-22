@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/viewproduct.css">
+
+<!-- Bootstrap + Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+<div th:replace="~{nav::layout(~{::section})}"></div>
+<section>
+<div class="container mt-5">
+  <div class="row align-items-center">
+
+    <!-- Product Image -->
+    <div class="col-md-5 text-center">
+      <img src="/images/laptop.jpg"
+           class="img-fluid product-img "
+           alt="Product Image">
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-7">
+
+      <!-- Title -->
+      <h2 class="mb-3">iPhone 17</h2>
+
+      <!-- Description -->
+      <p><strong>Description :</strong><br>
+        Meet the new iPhone 17.
+      </p>
+
+      <!-- Details -->
+      <p><strong>Product Details:</strong></p>
+      <p>
+        Status :
+        <span class="badge bg-success">Available</span><br>
+        Category : Mobile Phone <br>
+        Policy : 7 Days Replacement & Return
+      </p>
+
+      <!-- Price -->
+      <h4 class="price">
+        ₹ 45000.0
+        <span class="old-price">50000.0</span>
+        <span class="discount">10% off</span>
+      </h4>
+
+      <!-- Features -->
+      <div class="row text-center mt-4">
+
+        <div class="col-4">
+          <i class="fa-solid fa-money-bill-wave feature-icon text-success"></i>
+          <p>Cash On Delivery</p>
+        </div>
+
+        <div class="col-4">
+          <i class="fa-solid fa-rotate-left feature-icon text-danger"></i>
+          <p>Return Available</p>
+        </div>
+
+        <div class="col-4">
+          <i class="fa-solid fa-truck feature-icon text-primary"></i>
+          <p>Free Shipping</p>
+        </div>
+
+      </div>
+      <!-- Button -->
+      <button  class="btn add-cart-btn mt-4 w-100" >
+        Add To Cart
+      </button>
+
+    </div>
+  </div>
+</div>
+
+</section>
+
+</body>
+</html>

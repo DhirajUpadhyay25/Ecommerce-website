@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/admins/dashboard.css">
+<!-- Bootstrap + Font Awesome -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+<div th:replace="~{nav::layout(~{::section})}"></div>
+<section>
+<div class="container mt-5">
+
+  <!-- Title -->
+  <h2 class="text-center mb-5">Admin Dashboard</h2>
+
+  <div class="row g-4">
+
+    <!-- Add Product -->
+    <div class="col-md-4">
+    <a href="/admin/addProduct" class="text-decoration-none">
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-plus icon text-primary"></i>
+        <h5>Add Product</h5>
+      </div>
+      </a>
+    </div>
+
+    <!-- Add Category -->
+    <div class="col-md-4">
+    <a href="/admin/addCategory" class="text-decoration-none">
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-bars icon text-warning"></i>
+        <h5>Add Category</h5>
+      </div>
+      </a>
+    </div>
+
+    <!-- View Product -->
+    <div class="col-md-4">
+        <a href="/List_products" class="text-decoration-none">
+    
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-table-list icon text-success"></i>
+        <h5>View Product</h5>
+      </div>
+      </a>
+    </div>
+
+    <!-- Orders -->
+    <div class="col-md-4">
+        <a href="login" class="text-decoration-none">
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-box icon text-warning"></i>
+        <h5>Orders</h5>
+      </div>
+      </a>
+    </div>
+
+    <!-- Users -->
+    <div class="col-md-4">
+        <a href="login" class="text-decoration-none">
+    
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-user icon text-primary"></i>
+        <h5>Users</h5>
+      </div>
+      </a>
+    </div>
+
+    <!-- Add Admin -->
+    <div class="col-md-4">
+        <a href="login" class="text-decoration-none">
+    
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-user-plus icon text-primary"></i>
+        <h5>Add Admin</h5>
+      </div>
+     </a>
+    </div>
+
+    <!-- Admin -->
+    <div class="col-md-4">
+        <a href="login" class="text-decoration-none">
+    
+      <div class="dashboard-card text-center">
+        <i class="fa-solid fa-user-shield icon text-primary"></i>
+        <h5>Admin</h5>
+      </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+
+</section>
+</body>

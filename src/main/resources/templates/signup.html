@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>SignUp here </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/signup.css">
+<link rel="stylesheet" href="/css/footer.css">
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<body>
+<div th:replace="~{nav::layout(~{::section})}"></div>
+<section>
+    
+    <div class="container">
+    <div class="row">
+ <div class ="col-md-6">
+ <img src="/images/auth4.jpg" alt="imagess" height="600px" width="600px">
+ </div>
+ 
+ <div class ="col-md-6">
+    <div class="register-container d-flex justify-content-center align-items-center">
+   <div class="register-card mt-3">
+
+    <h3 class="text-center mb-2">Register Here</h3>
+
+    <form class="row g-3" action="/registers" method="post">
+
+      <!-- Name -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="Name" required>
+        <label>Name</label>
+      </div>
+
+      <!-- Phone -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="Phone">
+        <label>Phone Number</label>
+      </div>
+
+      <!-- Email -->
+      <div class="col-12 form-floating">
+        <input type="email" class="form-control custom-input" placeholder="Email">
+        <label>Email</label>
+      </div>
+
+      <!-- Address -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="Address">
+        <label>Address</label>
+      </div>
+
+      <!-- City -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="City">
+        <label>City</label>
+      </div>
+
+      <!-- State -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="State">
+        <label>State</label>
+      </div>
+
+      <!-- Pincode -->
+      <div class="col-md-6 form-floating">
+        <input type="text" class="form-control custom-input" placeholder="Pincode">
+        <label>Pincode</label>
+      </div>
+
+      <!-- Password -->
+      <div class="col-md-6 position-relative form-floating">
+        <input type="password" class="form-control custom-input" id="password" placeholder="Password">
+        <label>Password</label>
+        <span class="toggle-password" onclick="togglePassword('password', this)">
+          <i class="fa fa-eye"></i>
+        </span>
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="col-md-6 position-relative form-floating">
+        <input type="password" class="form-control custom-input" id="confirmPassword" placeholder="Confirm Password">
+        <label>Confirm Password</label>
+        <span class="toggle-password" onclick="togglePassword('confirmPassword', this)">
+          <i class="fa fa-eye"></i>
+        </span>
+      </div>
+
+      <!-- Profile Pic -->
+      <div class="col-12">
+        <label class="form-label">Profile Pic</label>
+        <input type="file" class="form-control file-input">
+      </div>
+
+      <!-- Button -->
+      <div class="col-12">
+        <button type="submit" class="btn register-btn w-100  btn btn-success">Register</button>
+      </div>
+
+      <!-- Login link -->
+      <p class="text-center mt-3">
+        Have an account? <a href="login" class="login-link">Login</a>
+      </p>
+
+    </form>
+
+  </div>
+</div>
+    
+    </div>
+    </div>
+    </div>
+    <!--  Footer  -->
+<footer class="footer-section mt-5">
+  <div class="container">
+    <div class="row text-start">
+
+      <!-- Products -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Products</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">T-Shirts</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Phones</a></li>
+        </ul>
+      </div>
+
+      <!-- Network -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Network</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Science & Technology</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Company</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="footer-bottom text-center ">
+     ©2026 DressUp. All Rights Reserved.
+</div>
+  </div>
+  </footer> 
+</section>
+</body>
+</html>

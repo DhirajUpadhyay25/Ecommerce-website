@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="/css/footer.css">
+<link rel="stylesheet" href="/css/index.css">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+<div th:replace="~{nav::layout(~{::section})}"></div>
+<section>
+  
+   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/img2.jpg" class="d-block w-100" alt="..." height="400px">
+    </div>
+    <div class="carousel-item">
+      <img src="images/img1.jpg" class="d-block w-100" alt="..."  height="400px">
+    </div>
+    <div class="carousel-item">
+      <img src="images/img3.jpg"class="d-block w-100" alt="..."  height="400px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!-- Product  Categories here  -->
+<div class="container">
+<div class="row">
+<p class="text-center fs-4 mt-2">Product Categories</p>  
+<div class="col-md-3 "th:each="p : ${category}">
+<div class="card shadow p-3 mb-5 bg-body rounded product-card" >
+<div class="card-body text-center bg-light " >
+<img  th:src="@{'/category_img/' + ${p.imageName}}" width="60%" height="120px" alt="product-Image ">
+ <p th:text="${p.name}"></p> 
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--  Latest Products  -->
+<div class="container">
+<div class="row">
+<p class="text-center fs-4 mt-2">Latest Products</p>
+<div class="col-md-3 " th:each="p : ${product}">
+<div class="card shadow p-3 mb-5 bg-body rounded product-card" >
+
+<div class="card-body text-center bg-light">
+<img  th:src="@{'/product_img/' + ${p.image}}" width="60%" height="120px" alt="product-Image ">
+ <p th:text="${p.name}"></p>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<!--  Footer  -->
+<footer class="footer-section mt-5">
+  <div class="container">
+    <div class="row text-start">
+
+      <!-- Products -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Products</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">T-Shirts</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Phones</a></li>
+        </ul>
+      </div>
+
+      <!-- Network -->
+      <div class="col-md-3 col-6">
+        <h5 class="footer-title">Network</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">Science & Technology</a></li>
+          <li><a href="#">Business</a></li>
+          <li><a href="#">Professional</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Company</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="col-md-3 col-6 mt-4 mt-md-0">
+        <h5 class="footer-title">Follow Us</h5>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        
+      </div>
+
+    </div>
+    <div class="footer-bottom text-center ">
+     ©2026 DressUp. All Rights Reserved.
+</div>
+  </div>
+</footer>
+</section>
+</body>
+</html>

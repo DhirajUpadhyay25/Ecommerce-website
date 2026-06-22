@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* Card */
+.product-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  background: #fff;
+}
+
+/* Hover lift */
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.product-img {
+  height: 150px;
+  object-fit: contain;
+  transition: 0.4s;
+}
+
+/* Image zoom on hover */
+.product-card:hover .product-img {
+  transform: scale(1.05);
+}
+
+/* Title */
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Price */
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Old price */
+.old-price {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Discount */
+.discount {
+  color: green;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+/* Button */
+.view-btn {
+  background: linear-gradient(135deg, #4a6cf7, #3b5bdb);
+  color: #fff;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.view-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(74,108,247,0.4);
+}
+
+.rating-inline {
+  font-size: 14px;
+  margin-left: 8px;
+  font-weight: 500;
+  color: #28a745;   /* Bootstrap green */
+}
+
+.rating-inline i {
+  color: #28a745;   /* star color */
+  margin-right: 3px;
+}

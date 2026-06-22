@@ -1,0 +1,87 @@
+
+.footer-section {
+  background: #0f0f0f; /* Deep black */
+  color: #fff;
+  padding: 60px 0;
+  border-top: 2px solid #ff4d4d;
+}
+
+/* Titles */
+.footer-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  color: #fff;
+}
+
+/* Neon underline */
+.footer-title::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4d4d, #ff9966);
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+
+.footer-title:hover::after {
+  width: 100%;
+}
+
+/* Links */
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #bbb;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Glow hover effect */
+.footer-links a:hover {
+  color: #fff;
+  padding-left: 8px;
+  text-shadow: 0 0 8px rgba(255, 77, 77, 0.7);
+}
+
+/* Sliding arrow */
+.footer-links a::before {
+  content: "→";
+  position: absolute;
+  left: -15px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.footer-links a:hover::before {
+  left: -5px;
+  opacity: 1;
+}
+
+/* Social icons */
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+/* Neon hover effect */
+.social-icons a:hover {
+  background: #ff4d4d;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #ff4d4d, 0 0 30px rgba(255,77,77,0.5);
+}

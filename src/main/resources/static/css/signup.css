@@ -1,0 +1,81 @@
+@charset "UTF-8";
+body {
+  background: #f5f7fa;
+}
+
+/* Container */
+.register-container {
+  min-height: 80vh;
+}
+
+/* Card */
+.register-card {
+  background: #fff;
+  padding: 25px;              /* reduced padding */
+  border-radius: 10px;
+  width: 500px;               /* 🔥 reduced from 700px */
+  max-width: 80%;             /* responsive safety */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+
+
+.register-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Inputs */
+.custom-input {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+/* Focus glow */
+.custom-input:focus {
+  border-color: #ff4d4d;
+  box-shadow: 0 0 10px rgba(255, 77, 77, 0.3);
+}
+
+/* File input */
+.file-input {
+  border-radius: 8px;
+}
+
+/* Button */
+.register-btn {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 77, 77, 0.4);
+}
+/* Password toggle */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+}
+
+.toggle-password:hover {
+  color: #ff4d4d;
+}
+
+/* Links */
+.login-link {
+  color: #ff4d4d;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+/* Card */
+.dashboard-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Icons */
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+
+
+/* Title */
+.dashboard-card h5 {
+  font-weight: 600;
+}
